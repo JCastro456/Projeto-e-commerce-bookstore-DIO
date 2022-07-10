@@ -1,0 +1,23 @@
+<div class="card shadow-sm bg-dark text-light mb-4" height="70%">
+    <img
+      class="rounded mx-auto mt-3"
+      src="{{ 'assets/imagens/' + book.img + '.jpg' }}"
+      [alt]="book.img"
+      width="55%"
+      height="55%"      
+    />
+  
+    <div class="card-body d-flex flex-column" widht="40%">
+      <h5 class="card-text mx-auto mb-2">{{ book.name }}</h5>
+      <p class="card-text mb-1">{{ book.category }}</p>
+      <p class="card-text mb-1">Em estoque: {{ book.quantity }}</p>
+      <h4 class="card-text mx-auto">
+        {{ book.price | currency: "BRL":"symbol":".2-2":"pt-BR" }}
+      </h4>
+  
+      <div class="btn-group-vertical w-100" widht="40%">
+        <button class="btn btn-light text-dark" type="button">Detalhes</button>
+        <button class="btn btn-secondary" type="button">Comprar</button>
+      </div>
+    </div>
+  </div>

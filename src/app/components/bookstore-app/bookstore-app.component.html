@@ -1,0 +1,8 @@
+<div class="row">
+   <div class="col-md-3">
+     <app-filters (filter)="addFilter($event)"></app-filters>
+   </div>
+   <div class="col-md-9">
+     <app-product-list [filter]="filter"></app-product-list>
+   </div>   
+ </div>
